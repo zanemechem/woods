@@ -1,0 +1,97 @@
+header {text-align:center;
+				font-size:1em;
+				background-color:rgb(49,169,224);
+				color:white;
+				border-style:none;
+				padding:3%
+				position:static;
+				}
+
+
+
+
+#centeredone {
+	text-align:center;
+}
+
+#firstform{padding-left:20%}
+
+
+h4 {
+	font-family: sans-serif;
+	font-size: 1.5em;
+}
+
+
+
+h3 {
+	
+	font-family:sans-serif;
+	font-weight:780;
+	font-size:2em;
+	
+	
+}
+
+#amounttoconvertform {
+	width=auto;
+}
+
+#firstimage {
+	float:left;
+	padding:2% 4% 1% 2%
+}
+
+#secondimage {
+	align:left;
+	float:left;
+	padding: 2% 4% 2% 2%
+	
+}
+
+#minput,#cinput,#pinput {
+	position:relative;
+	left: 2% ;
+	width: 6%;
+	
+	
+		
+}
+
+#arrow {
+	position:relative;
+	margin-bottom: -29%;
+	right:49%;
+	top:-3em;
+	display:none;
+	height:auto;
+	width:auto;
+}
+
+h1 {
+	font-family:futura;
+	font:futura;
+	
+}
+
+
+
+p {
+	
+}
+
+
+
+div {
+
+#bigone {
+	margin-top:40%;
+	
+}
+
+
+
+
+
+
+

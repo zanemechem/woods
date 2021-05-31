@@ -1,0 +1,137 @@
+<html>
+
+
+<head> <title>Woods Converter</title>
+	<link rel="stylesheet" type="text/css" href = "handheld.css" media = "screen and (min-width : 801px)">
+	<link rel="stylesheet" type="text/css" href = "handheld.css" media = "screen and (max-width : 800px)">
+	</head>
+<header><h1>The Woods Converter</h1><p>now in open beta</p></header>
+		
+<body>
+<div id = "bigone">
+<div>
+
+	<h3 id="centeredone">First, Rate these jazz musicians on a <br>scale from 1 to 10 where Phil Woods
+		is 5:</h3><br><br>
+<form id="firstform">
+  <h4>Miles Davis:
+  <input type = "number" id = "minput" name = "milesinput"><br><br>
+  John Coltrane: 
+  <input type = "number" id = "cinput" name = "coltraneinput"><br><br>
+  Charlie Parker: 
+	<input type = "number" id = "pinput" name = "parkerinput"><br><br></h4>
+	
+</form>
+	</div>
+<form id = "formofwoods">
+	<img id = "firstimage" src = "white.png" width="50%" height = "55%">
+	<div id="amounttoconvertform">
+		<h3>Amount you'd like <br>to convert: </h3>
+	<h4>
+  <input type = "number" id = "userinput" name = "amount"><br><br>
+  Type to convert:<br><br>
+  <input type = "radio" id = "radio1" name = "type1" value = "true" onClick = 'imagefunction("firstimage","miles.png")'> Miles<br>
+  <input type = "radio" id = "radio2" name = "type1" value = "floz" onClick = 'imagefunction("firstimage","floz.png")'> Fluid Ounces<br>
+  <input type = "radio" id = "radio3" name = "type1" value = "fpounds" onClick = 'imagefunction("firstimage","pounds.png")'> Pounds<br>
+	<input type = "radio" id = "radio4" name = "type1" value = "woods" onClick = 'imagefunction("firstimage","woods.png")'> Woods<br></h4>
+	</div>
+</form>
+	<img id = "arrow" src = "arrow.png">
+
+<div>
+	<form>
+	<br>
+
+<img id = "secondimage" src="white.png" width="50%" height = "50%">
+	
+		<h3>What to convert to: </h3> <br><h4>
+		<input type = "radio" id = "secondradio1" name = "type2" value = "true" onClick = 'imagefunction("secondimage","miles.png")'> Miles<br>
+		<input type = "radio" id = "secondradio2" name = "type2" value = "floz" onClick = 'imagefunction("secondimage","floz.png")'> Fluid Ounces<br>
+		<input type = "radio" id = "secondradio3" name = "type2" value = "fpounds" onClick = 'imagefunction("secondimage","pounds.png")'> Pounds<br>
+		<input type = "radio" id = "secondradio4" name = "type2" value = "fpounds" onClick = 'imagefunction("secondimage","woods.png")'> Woods<br>		
+			<br>
+		<input type = "button" onclick = "functionforclicking()" height= "1em" width = "2em" name = "type1" value = "Convert"> <br></h4>
+	</form>
+</div><br>
+<h1 id = "printstuffhere"> </h1>
+	</div>
+
+<script>
+
+
+
+	function imagefunction(arg1,arg2){
+		document.getElementById(arg1).src = arg2
+		if (arg1 == "secondimage") {
+			document.getElementById("arrow").style.display = "block"
+		}
+	}
+	
+  function printtoh1(arg1){
+    document.getElementById("printstuffhere").innerHTML = arg1;
+  }
+  function functionforclicking(){
+    var firsttype
+    var secondtype
+    for (i=1; i<5; i++){
+      if (document.getElementById("radio" + i).checked == true) {
+        firsttype = i;
+      }
+    }
+    for (i=1; i<5; i++){
+      if (document.getElementById("secondradio" + i).checked == true) {
+        secondtype = i;
+      }
+    }
+    printtoh1(firsttype);
+
+    var firstquant
+    var secondquant
+		var secondname
+		var firstname
+		
+    if (firsttype == 1) {
+      firstquant = document.getElementById("minput").value / 5;
+    	firstname = " miles";
+    } else if (firsttype == 2) {
+      firstquant = document.getElementById("cinput").value / 5;
+			firstname = " fluid ounces";
+    } else if (firsttype == 3) {
+      firstquant = document.getElementById("pinput").value / 5;
+			firstname = " pounds";
+    } else if (firsttype == 4) {
+			firstquant = 1
+			firstname = " woods"
+		}
+    if (secondtype == 1) {
+      secondquant = document.getElementById("minput").value / 5;
+    	secondname = " miles";
+    } else if (secondtype == 2) {
+      secondquant = document.getElementById("cinput").value / 5;
+			secondname = " fluid ounces";
+    } else if (secondtype == 3) {
+      secondquant = document.getElementById("pinput").value / 5;
+    	secondname = " pounds";
+    } else if (secondtype == 4) {
+			secondquant = 1
+			secondname = " woods"
+		}
+    console.log(firstquant);
+    console.log(secondquant);
+    console.log(document.getElementById("userinput").value);
+    console.log(finalnumber);
+    var finalnumber = firstquant / secondquant * document.getElementById("userinput").value
+    printtoh1(document.getElementById("userinput").value + firstname  + " gets converted into " + finalnumber.toFixed(3) + secondname)
+  }
+
+
+
+</script>
+
+
+</body>
+
+
+
+
+</html>

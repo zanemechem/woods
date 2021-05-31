@@ -1,0 +1,51 @@
+header {text-align:center;
+				font-size:16pt;
+				background-color:rgb(49,169,224);
+				color:white;
+				border-style:none;
+				padding: 5px 
+				}
+
+#amounttoconvertform {
+	width=auto;
+}
+
+#firstimage {
+	float:left;
+	padding:10px 30px 10px 10px
+}
+
+#secondimage {
+	align:left;
+	float:left;
+	padding: 10px 20px 10px 10px
+	
+}
+
+#minput,#cinput,#pinput {
+	position:absolute;
+	left: 150px;
+	width: 50px
+	
+		
+}
+
+#arrow {
+	position:relative;
+	margin-bottom: -225;
+	left:-325;
+	top:-100;
+	display:none
+}
+
+h1 {
+	font-family:futura;
+	font:futura;
+	
+}
+
+
+
+p {
+	
+}
